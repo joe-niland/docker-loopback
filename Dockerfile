@@ -2,7 +2,12 @@ FROM mhart/alpine-node:latest
 
 MAINTAINER Joe Niland <joe@originalmind.com.au>
 
-RUN npm install -g --silent apiconnect # strongloop
+RUN set -x \
+      && apk --update add \
+	python \
+	git
+
+RUN npm install -g --silent --python=python2.7 apiconnect strongloop
 
 EXPOSE 3000
 
