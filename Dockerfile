@@ -1,11 +1,13 @@
-FROM mhart/alpine-node:latest
+FROM alpine:edge
 
 MAINTAINER Joe Niland <joe@originalmind.com.au>
 
 RUN set -x \
       && apk --update add \
-	python \
-	git
+      		build-base \
+		python2 \
+		nodejs \
+		git
 
 RUN npm install -g --silent --python=python2.7 apiconnect strongloop
 
