@@ -9,7 +9,7 @@ RUN set -x \
 		nodejs \
 		git
 
-RUN npm install -g --silent --python=python2.7 apiconnect strongloop
+RUN npm install -g --silent --python=python2.7 apiconnect strongloop gulp yo
 
 # ports: node apiconnect
 EXPOSE 3000 4001
