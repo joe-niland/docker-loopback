@@ -11,7 +11,8 @@ RUN set -x \
 
 RUN npm install -g --silent --python=python2.7 apiconnect strongloop
 
-EXPOSE 3000
+# ports: node apiconnect
+EXPOSE 3000 4001
 
 VOLUME ["/app"]
 WORKDIR /app
